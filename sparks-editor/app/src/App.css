@@ -1,0 +1,41 @@
+#editing, #result {
+  /* Both elements need the same text and space styling so they are directly on top of each other */
+  margin: 10px;
+  padding: 10px;
+  border: 0;
+  width: calc(100% - 32px);
+  height: 150px;
+
+  overflow: auto;
+  /*white-space: nowrap; !* Allows textarea to scroll horizontally *!*/
+}
+
+#editing, #highlighting, #highlighting * {
+  /* Also add text styles to highlighting tokens */
+  font-size: 15pt;
+  font-family: monospace;
+  line-height: 20pt;
+  tab-size: 2;
+}
+
+#editing {
+  z-index: 1;
+  resize: none;
+
+  position: absolute;
+  top: 10em;
+
+  background: transparent;
+  caret-color: black; /* Or choose your favorite color */
+  /*color: #1a1a1a;*/
+
+}
+
+#result {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+
+  /*  background: black;*/
+  /*}*/
+}
